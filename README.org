@@ -1,0 +1,41 @@
+* Why Pattern Matching?
+** pattern matching has been around a long time, aka "parsers" in compiler technology
+** pattern matching is being "discovered" by FP (functional programming <= DSLs for types)
+** pattern matching neatly lassos a portion of programming - makes programming tasks smaller
+** history is embedded in streams, pattern matchers walk the streams and invoke actions ; f(t)
+* Why PEG?
+** much easier to use than YACC
+** REGEX-like DSL for patterns
+** backtracking
+   exhaustive search
+   backtracking was verbotten in 19xx's due to efficiency concerns
+* PEG vs REGEX
+** PEG is "better" than REGEX
+** PEG allows programmer to define callable sub-matcher rules
+** PEG is recursive, REGEX is flat
+* PEG vs YACC (+LEX)
+** PEG creates top-down parsers
+** YACC creates bottom-up language definitions
+** YACC needs a lexer (e.g. LEX)
+** PEG doesn't need a separate lexer   
+* PEG libraries
+** Racket
+   (require peg), or
+   #lang peg
+   https://guitarvydas.github.io/2021/03/19/Racket-PEG.html
+** Common Lisp
+   ESRAP
+** JavaScript
+   Ohm-JS
+   peg.js
+   etc.
+** Others
+   https://bford.info/packrat/
+   etc., etc.
+* Why Ohm?
+** What Makes Ohm Better Than Other PEGs?
+*** pattern matching DSL remains pure - not soiled by programming details
+*** Ohm-Editor
+**** Huge advantage for rapid development of grammars
+**** Heralds a new way to think about problem solvin
+     
